@@ -15,13 +15,15 @@ It empowers customers to raise service-related complaints and provide structured
     - Technical Issue  
     - Other  
 
-- **Website Integration**  
+- **Website Integration**
+  - feedback complaint submission form
   - complaint submission form.  
   - Each complaint is tracked with a **unique reference ID**.  
 
 - **Complaint Assignment & Resolution**  
   - Complaints are routed to relevant departments/officers.  
-  - Admins can update status: `Pending`, `Resolved`, `Escalated`.  
+  - Admins can update status: `Pending`, `Resolved`, `Escalated`.
+  - Admins can reply to feedback.
 
 - **Manager Response**  
   - Resolution notes logged in the system.  
