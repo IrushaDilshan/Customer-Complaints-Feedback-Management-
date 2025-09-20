@@ -1,0 +1,209 @@
+/* Keep the base container class */
+.App {
+  text-align: center;
+}
+
+/* Full-screen soft gradient background and centering */
+.App-header {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(1200px 600px at 20% 10%, #e8f1ff 0%, #f5fbff 35%, #eef6f7 60%, #e7f0f1 100%);
+  color: #1f2937;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+/* Card */
+.fb-card {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 28px 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Hero speech bubble with stars */
+.fb-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.fb-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffb54a;
+  color: #fff;
+  border-radius: 14px;
+  padding: 10px 16px;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.08);
+}
+.fb-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 26%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #ffb54a;
+}
+.fb-stars-mini {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Headings */
+.fb-title {
+  margin: 10px 0 6px;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #111827;
+}
+.fb-subtitle {
+  margin: 0 24px 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+/* Form */
+.fb-form {
+  display: grid;
+  gap: 12px;
+}
+.fb-input,
+.fb-textarea {
+  width: 100%;
+  border: 1px solid #eef0f4;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+.fb-input::placeholder,
+.fb-textarea::placeholder {
+  color: #9aa3af;
+}
+.fb-input:focus,
+.fb-textarea:focus {
+  border-color: #b9d8ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+/* Rating row */
+.fb-rating {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.fb-star {
+  border: 1px solid #eef0f4;
+  background: #ffffff;
+  border-radius: 12px;
+  height: 44px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.2s, background 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.06);
+}
+.fb-star:hover {
+  transform: translateY(-1px);
+}
+.fb-star.is-active {
+  background: #fff7ea;
+  border-color: #ffd599;
+  box-shadow: inset 0 0 0 1px #ffd599, 0 2px 8px rgba(255, 181, 74, 0.3);
+}
+
+/* Submit button */
+.fb-submit {
+  margin-top: 6px;
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+  background: #1e9ae7;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.02s ease;
+  box-shadow: 0 6px 14px rgba(30, 154, 231, 0.28);
+}
+.fb-submit:hover {
+  filter: brightness(1.05);
+}
+.fb-submit:active {
+  transform: translateY(1px);
+}
+
+
+/* Accessibility focus rings for all clickable elements inside the card */
+.fb-card :is(button, input, textarea):focus-visible {
+  outline: 3px solid rgba(30, 154, 231, 0.35);
+  outline-offset: 2px;
+  border-color: #90caf9;
+}
+
+/* Thanks page styles */
+.thanks-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 2px 10px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.thanks-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.thanks-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.thanks-message {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.thanks-btn {
+  display: inline-block;
+  background: #1e9ae7;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 12px;
+  transition: filter 0.2s, transform 0.1s;
+  box-shadow: 0 6px 14px rgba(30, 154, 231, 0.28);
+}
+.thanks-btn:hover {
+  filter: brightness(1.05);
+}
+.thanks-btn:active {
+  transform: translateY(1px);
+}
